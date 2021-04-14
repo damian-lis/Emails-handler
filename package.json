@@ -19,6 +19,8 @@
   "dependencies": {
     "@sendgrid/mail": "^7.4.2",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemailer": "^6.5.0",
+    "nodemailer-mailgun-transport": "^2.0.3"
   }
 }
