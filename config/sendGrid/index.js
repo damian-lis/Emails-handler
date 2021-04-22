@@ -1,6 +1,6 @@
 const sgMail = require('@sendgrid/mail')
 const createGisapiaMessages = require('./createGisapiaMessages.js')
-const keys = require('../../env.js')
+const keys = require('/env.js')
 
 sgMail.setApiKey(keys.SENDGRID_API_KEY || process.env.SENDGRID_API_KEY)
 
