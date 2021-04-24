@@ -53,13 +53,13 @@ const createGisapiaMessages = ({ type, data }) => {
                 ${p(
                   ` As promised, I am sending information that I can remember. 😉`
                 )}
-                ${p(`So yeah, your name is ${strong(name)},`)}
+                ${p(`So yeah, Your name is ${strong(name)},`)}
                 ${p(`Your city of residence is ${strong(origin)},`)}
-                ${p(`the hobby you do in your spare time is ${strong(hobby)},`)}
+                ${p(`the hobby You do in Your spare time is ${strong(hobby)},`)}
                 ${p(`I think he did well which did not? 😃`)}
                 ${space(5)}
                 ${p(`Thanks so much for the interview, had a good time 😎`)}
-                ${p(`I hope you too 😋!`)}
+                ${p(`I hope You too 😋!`)}
                 `,
             }
       break
