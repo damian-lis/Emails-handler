@@ -23,12 +23,9 @@ const sendPortfolioMail = (req, res) => {
 
   transporter.sendMail(mailOptions, (err) => {
     if (err) {
-      res.status(500).json({
-        success: false,
-        message: 'Something went wrong, try again! 😬',
-      })
+      res.status(500).json({ success: false })
     } else {
-      res.json({ success: true, message: 'Message sent! 😎' })
+      res.json({ success: true })
     }
   })
 }
