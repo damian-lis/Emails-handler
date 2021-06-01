@@ -17,9 +17,7 @@ const sendGisapiaMail = (req, res) => {
     })
     .catch((error) => {
       console.error(error)
-      res.json({
-        success: false,
-      })
+      res.status(500).json({ success: false })
     })
 }
 
