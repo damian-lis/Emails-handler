@@ -76,7 +76,7 @@ app.use('/api/mail/gisapia', sendGisapiaMail)
 
 <br/>
 
-### 4.1. Handle mailgun/nodemailer services
+### 4.2. Handle mailgun/nodemailer services
 
 Below is the code responsible for sending email to my mailbox from the portfolio website via mailgun/nodemailer sercices.
 
@@ -130,7 +130,7 @@ The following processes take place in the example above:
 
 <br/>
 
-### 4.2. Handle sendgrid service
+### 4.3. Handle sendgrid service
 
 Below is the code responsible for sending email to user mailbox from the Talk to Gisapia and the others app via sendgrid sercice.
 
