@@ -31,7 +31,7 @@ The following technologies were used in the project:
 - Mailgun
 - SendGrid
 
-  <br/>
+<br/>
 
 ## 3. Setup
 
@@ -50,9 +50,11 @@ The app uses services such as nodemailer, mailgun and sendgrid.
 
 The list of the most interesting features used in the app is presented below:
 
-&nbsp; &nbsp; &nbsp; &nbsp; 4.1. Routes <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; 4.2. Handle mailgun/nodemailer services <br/>
-&nbsp; &nbsp; &nbsp; &nbsp; 4.3. Handle sendgrid service <br/>
+&nbsp; 4.1. Routes
+
+&nbsp; 4.2. Handle mailgun/nodemailer services
+
+&nbsp; 4.3. Handle sendgrid service
 
 <br/>
 
@@ -60,17 +62,21 @@ The list of the most interesting features used in the app is presented below:
 
 The app supports two query paths:
 
-- the route that handle query from the porfolio website (index.js):
+- the route that handle query from the porfolio website:
 
 ```
+//index.js file:
+
 app.use('/api/mail/portfolio', sendPortfolioMail)
 ```
 
 <br/>
 
-- the route that handle query from the Talk to Gisapia and the Others app (index.js):
+- the route that handle query from the Talk to Gisapia and the Others app:
 
 ```
+//index.js file:
+
 app.use('/api/mail/gisapia', sendGisapiaMail)
 ```
 
@@ -82,9 +88,11 @@ Below is the code responsible for sending email to my mailbox from the portfolio
 
 <br/>
 
-The example of this solution is below (nodemailer/index.js):
+The example of this solution is below:
 
 ```
+//nodemailer/index.js file:
+
 const nodemailer = require('nodemailer')
 const mailGun = require('nodemailer-mailgun-transport')
 const keys = require('/env.js')
@@ -125,7 +133,7 @@ The following processes take place in the example above:
 - assigning the nodemailer (package) object to the nodemailer variable,
 - assigning the nodemailer-mailgun-transport (package) function to the mailGun variable,
 - assigning the appropriate mailGun keys to the keys variable,
-- returning the so-called transporter object using the createTransport method of the nodemailer object (along with calling the mailGun function with passing the object argument containing the auth keys)
+- returning the so-called transporter object using the createTransport method of the nodemailer object (along with calling the mailGun function with passing the object argument containing the auth keys),
 - calling the sendPortfolioMail function as a result of sending a query to the appropriate server route ('/api/mail/portfolio'), which destructs the passed data and uses them to dynamically complete the object assigned to the mailOptions variable. At the very end, in the discussed function, the sendMail method of the transporter object is called, which is responsible for sending the e-mail (when the e-mail is sent, json is returned with information about success, otherwise the status 500 with information about failure).
 
 <br/>
@@ -136,9 +144,11 @@ Below is the code responsible for sending email to user mailbox from the Talk to
 
 <br/>
 
-The example of this solution is below (sendgrid/index.js):
+The example of this solution is below:
 
 ```
+//sendgrid/index.js file:
+
 const sgMail = require('@sendgrid/mail')
 const keys = require('../../env.js')
 
@@ -163,7 +173,6 @@ const sendGisapiaMail = (req, res) => {
 }
 
 module.exports = sendGisapiaMail
-
 ```
 
 The following processes take place in the example above:
