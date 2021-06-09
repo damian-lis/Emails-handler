@@ -64,7 +64,7 @@ The app supports two query paths:
 
 - the route that handle query from the porfolio website:
 
-```
+```js
 //index.js file:
 
 app.use('/api/mail/portfolio', sendPortfolioMail)
@@ -74,7 +74,7 @@ app.use('/api/mail/portfolio', sendPortfolioMail)
 
 - the route that handle query from the Talk to Gisapia and the Others app:
 
-```
+```js
 //index.js file:
 
 app.use('/api/mail/gisapia', sendGisapiaMail)
@@ -90,7 +90,7 @@ Below is the code responsible for sending email to my mailbox from the portfolio
 
 The example of this solution is below:
 
-```
+```js
 //nodemailer/index.js file:
 
 const nodemailer = require('nodemailer')
@@ -118,7 +118,7 @@ const sendPortfolioMail = (req, res) => {
 
   transporter.sendMail(mailOptions, (err) => {
     if (err) {
-      res.status(500).json({success: false})
+      res.status(500).json({ success: false })
     } else {
       res.json({ success: true })
     }
@@ -146,7 +146,7 @@ Below is the code responsible for sending email to user mailbox from the Talk to
 
 The example of this solution is below:
 
-```
+```js
 //sendgrid/index.js file:
 
 const sgMail = require('@sendgrid/mail')
@@ -168,7 +168,7 @@ const sendGisapiaMail = (req, res) => {
     })
     .catch((error) => {
       console.error(error)
-       res.status(500).json({success: false})
+      res.status(500).json({ success: false })
     })
 }
 
