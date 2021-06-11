@@ -8,9 +8,8 @@ const port = process.env.PORT || '5000'
 
 app.use(cors())
 app.use(express.json())
-
+app.use(express.static('public'))
 app.use('/api/mail/gisapia', sendGisapiaMail)
 app.use('/api/mail/portfolio', sendPortfolioMail)
-app.get('/', (req, res) => res.send('Emails handler app'))
 
 app.listen(port, () => console.log(`Server running on ${port}`))
