@@ -9,20 +9,20 @@ The backend app that is used to handle e-mails in my projects below:
 
 ## Table of Contents
 
-1. General info
-2. Technologies
-3. Setup
-4. Features
+1. [General info](#general-info)
+2. [Technologies](#technologies)
+3. [Setup](#setup)
+4. [Features](#features)
 
    <br/>
 
-## 1. General info
+<h2 id="general-info">1. General info</h2>
 
 The main purpose of the application is to handle messages sent via the form on the portfolio website and via the messenger in the Talk to Gisapia and the others app.
 
 <br/>
 
-## 2. Technologies
+<h2 id="technologies">2. Technologies</h2>
 
 The following technologies were used in the project:
 
@@ -33,7 +33,7 @@ The following technologies were used in the project:
 
 <br/>
 
-## 3. Setup
+<h2 id="setup">3. Setup</h2>
 
 To run this project, install it locally using npm:
 
@@ -44,21 +44,21 @@ $ npm run start
 
 <br/>
 
-## 4. Features
+<h2 id="features">4. Features</h2>
 
 The app uses services such as nodemailer, mailgun and sendgrid.
 
 The list of the most interesting features used in the app is presented below:
 
-&nbsp; 4.1. Routes
+&nbsp; 4.1. [Routes](#routes)
 
-&nbsp; 4.2. Handle mailgun/nodemailer services
+&nbsp; 4.2. [Handle mailgun/nodemailer services](#mailgun)
 
-&nbsp; 4.3. Handle sendgrid service
+&nbsp; 4.3. [Handle sendgrid service](#sendgrid)
 
 <br/>
 
-### 4.1. Routes
+<h3 id="routes">4.1. Routes</h3>
 
 The app supports two query paths:
 
@@ -82,7 +82,7 @@ app.use('/api/mail/gisapia', sendGisapiaMail)
 
 <br/>
 
-### 4.2. Handle mailgun/nodemailer services
+<h3 id="mailgun">4.2. Handle mailgun/nodemailer services</h3>
 
 Below is the code responsible for sending email to my mailbox from the portfolio website via mailgun/nodemailer sercices.
 
@@ -138,7 +138,7 @@ The following processes take place in the example above:
 
 <br/>
 
-### 4.3. Handle sendgrid service
+<h3 id="sendgrid">4.3. Handle sendgrid service</h3>
 
 Below is the code responsible for sending email to user mailbox from the Talk to Gisapia and the others app via sendgrid sercice.
 
