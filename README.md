@@ -5,24 +5,19 @@ The backend app that is used to handle e-mails in my projects below:
 - Portfolio ([site](https://damianlis.pl/), [github](https://github.com/damian-lis/Portfolio-Website))
 - Talk to Gisapia and the others ([site](https://talktogisapiaandtheothers.pl/), [github](https://github.com/damian-lis/Talk-to-Gisapia-and-the-Others))
 
-<br/>
-
-## Table of Contents
-
-1. [General info](#general-info)
-2. [Technologies](#technologies)
-3. [Setup](#setup)
-4. [Features](#features)
-
-   <br/>
-
-<h2 id="general-info">1. General info</h2>
-
-The main purpose of the application is to handle messages sent via the form on the portfolio website and via the messenger in the Talk to Gisapia and the others app.
+_To facilitate navigation within the description, each section title links to the corresponding section. However, through the arrow ⬆ in the title of a specific section, you can refer to the closest list of specific sections._
 
 <br/>
 
-<h2 id="technologies">2. Technologies</h2>
+<h2 id="table-of-contents">Table of contents</h2>
+
+1. [Technologies](#technologies)
+2. [Setup](#setup)
+3. [Features](#features)
+
+<br/>
+
+<h2 id="technologies">1. Technologies <a href="#table-of-contents">⬆</a></h2>
 
 The following technologies were used in the project:
 
@@ -33,7 +28,7 @@ The following technologies were used in the project:
 
 <br/>
 
-<h2 id="setup">3. Setup</h2>
+<h2 id="setup">2. Setup <a href="#table-of-contents">⬆</a></h2>
 
 To run this project, install it locally using npm:
 
@@ -44,7 +39,7 @@ $ npm run start
 
 <br/>
 
-<h2 id="features">4. Features</h2>
+<h2 id="features">3. Features <a href="#table-of-contents">⬆</a></h2>
 
 The app uses services such as nodemailer, mailgun and sendgrid.
 
@@ -58,7 +53,7 @@ The list of the most interesting features used in the app is presented below:
 
 <br/>
 
-<h3 id="routes">4.1. Routes</h3>
+<h3 id="routes">4.1. Routes <a href="#features">⬆</a></h3>
 
 The app supports two query paths:
 
@@ -82,7 +77,7 @@ app.use('/api/mail/gisapia', sendGisapiaMail)
 
 <br/>
 
-<h3 id="mailgun">4.2. Handle mailgun/nodemailer services</h3>
+<h3 id="mailgun">4.2. Handle mailgun/nodemailer services <a href="#features">⬆</a></h3>
 
 Below is the code responsible for sending email to my mailbox from the portfolio website via mailgun/nodemailer sercices.
 
@@ -138,7 +133,7 @@ The following processes take place in the example above:
 
 <br/>
 
-<h3 id="sendgrid">4.3. Handle sendgrid service</h3>
+<h3 id="sendgrid">4.3. Handle sendgrid service <a href="#features">⬆</a></h3>
 
 Below is the code responsible for sending email to user mailbox from the Talk to Gisapia and the others app via sendgrid sercice.
 
