@@ -4,7 +4,7 @@ const sendPortfolioMail = require('./config/nodemailer/index.js')
 const cors = require('cors')
 
 const app = express()
-const port = process.env.PORT || '5000'
+const PORT = process.env.PORT || '5000'
 
 app.use(cors())
 app.use(express.json())
@@ -12,4 +12,4 @@ app.use(express.static('public'))
 app.use('/api/mail/gisapia', sendGisapiaMail)
 app.use('/api/mail/portfolio', sendPortfolioMail)
 
-app.listen(port, () => console.log(`Server running on ${port}`))
+app.listen(PORT, () => console.log(`Server running on ${PORT}`))
